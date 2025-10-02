@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Talvibe – Team, Credits & Supporters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .logo-container {
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .logo-container img {
+      width: 240px;
+      max-width: 90vw;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      color: #00bcd4;
+      animation: fadeIn 2s ease;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #00acc1;
+    }
+
+    .section p, .section ul {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Talvibe Logo (Official)" width="500" height="500">
+    </div>
+    <h1>About Talvibe</h1>
+  </header>
+
+  <!-- Creators Section -->
+  <section class="section" id="creators">
+    <h2>👨‍💻 Creators</h2>
+    <p>Talvibe was developed by a passionate developer named <strong> Athul vinod .M . This website is maintained now Athul vinod with team crimson vault. (founder : Athul vinod .M ) </strong>
+
+  <!-- Supporters Section -->
+  <section class="section" id="supporters">
+    <h2>🤝 Supporters</h2>
+    <p>Special thanks to the amazing early users and testers who supported us through development and gave valuable feedback. Without you, Talvibe wouldn't exist.</p>
+    <ul>
+      <li></li>
+      <li>@bugfinder</li>
+      <li>@community_testers</li>
+    </ul>
+  </section>
+
+  <!-- Credits Section -->
+  <section class="section" id="credits">
+    <h2>📜 Credits</h2>
+    <p>We proudly stand on the shoulders of open-source technologies:</p>
+    <ul>
+      <li>Flask (python) real time backend supoort</li>
+      <li>Base 64 - for security and encryption </li>
+      <li>Render.com – Host our website</li>
+<li>kodular - for creating apk</li>
+<li>Canva - for logo and assets</li>
+      <li>Github for git provider</li>
+<li>VS code for code editing</li>
+    </ul>
+  </section>
+
+  <!-- Thanks Section -->
+  <section class="section" id="thanks">
+    <h2>🙏 Thanks To</h2>
+    <p>We’d like to thank everyone who believed in this project from day one. Your support, encouragement, and contributions gave us strength to keep going through the late nights and tough bugs.</p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section" id="team">
+    <h2>👥 The Talvibe Team</h2>
+    <ul>
+      <li>Founder & Visionary: You</li>
+      <li>Backend Engineering: John Doe</li>
+      <li>Frontend/UX: Jane Smith</li>
+      <li>DevOps & Hosting: Sarah Johnson</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Talvibe • Built by Crimson vault With Athul • <a href="index.html">Back to Home</a>
+  </footer>
+
+  <script>
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
+
+
