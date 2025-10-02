@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talvibe Features – What Makes Us Unique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feature {
+      background-color: #1f1f1f;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 30px;
+      width: 300px;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .feature.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+
+    .feature h3 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .feature p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Talvibe Features</h1>
+    <p>Explore what makes Talvibe one of the most powerful real-time chat platforms.</p>
+  </header>
+
+  <!-- Features Grid -->
+  <section class="features-grid">
+
+    <div class="feature">
+      <h3>🔒 End-to-End Encryption</h3>
+      <p>All messages are encrypted for total privacy — only you and the recipient can read them.</p>
+    </div>
+
+    <div class="feature">
+      <h3>⚡ Real-Time Messaging</h3>
+      <p>Instant communication with socket-powered real-time delivery across all devices.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🌓 Amazing user freindly style</h3>
+      <p>Seamless colour combination with gen-z vibes for a better user experience.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🧠 Smart Syncing</h3>
+      <p>All messages, notifications, and data sync across sessions and devices automatically.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🚀 Lightweight Performance</h3>
+      <p>Optimized frontend and backend — even large conversations load instantly.</p>
+    </div>
+
+    <div class="feature">
+      <h3>👥 All Community Chat Feature</h3>
+      <p>For developing a equal social mentality , there is a community chat there every one can chat read .</p>
+    </div>
+
+    <div class="feature">
+      <h3>📁 Media Sharing</h3>
+      <p>Send images, files, voice notes, and more — all optimized for speed and security.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🛡️ Spam Protection</h3>
+      <p>Smart rate-limiting and moderation tools to protect against abuse and spam.</p>
+    </div>
+
+    <div class="feature">
+      <h3>📱 APK for Android</h3>
+      <p>Download our dedicated Android APK for native experience and performance.</p>
+    </div>
+
+    <div class="feature">
+      <h3>💬 No bot usage even if creator </h3>
+      <p>we also dont use bots , so you can chat to @admin for suggestions feedback or somthing un offical</p>
+    </div>
+
+    <div class="feature">
+      <h3>📶 Ultra privacy chat experiance with mega security features</h3>
+      <p>Chat is auto clear after every one leaves application, no data collection from premiuim users.</p>
+    </div>
+
+    <div class="feature">
+      <h3>✨ Regular Updates</h3>
+      <p>We frequently release updates, new features, and improvements based on user feedback.</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Talvibe • Built by Developers who Care • <a href="index.html">Back to Home</a>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const features = document.querySelectorAll('.feature');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    features.forEach(feature => {
+      observer.observe(feature);
+    });
+  </script>
+
+</body>
+</html>
